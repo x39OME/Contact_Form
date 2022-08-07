@@ -2,7 +2,6 @@
 
 $(function () { 
     'use strict';
-
     
     var userError  = true, // Setting Error Status
         emailError = true,
@@ -67,29 +66,11 @@ $(function () {
     });
     
     // Submit Form Valdation
-    
     $('.contact-form').submit(function (e) {
     
         if (userError === true || emailError === true || msgError === true ){
-            
-            
             e.preventDefault();
-            
             $('.username, .email, .message').blur();
         }
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
