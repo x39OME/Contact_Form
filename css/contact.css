@@ -1,12 +1,9 @@
-/* Star Form 1  */
-
 body{
     background-color: #F1F1F1;
 }
 .alert{
     margin-bottom:10px;
 }
-
 h1{
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
@@ -15,31 +12,24 @@ h1{
     color:#757575;
     margin: 10px;
 }
-
 .contact-form{
     max-width:400px;
     margin: 20px auto;
 }
-
 .contact-form .form-group{
     margin-bottom: 0;
     position: relative;
 }
-
 .contact-form input{
     padding-left: 32px
 }
-
 .contact-form input,
 .contact-form textarea{
     margin-bottom: 10px;
 }
-
 .contact-form textarea{
     height: 150px !important
 }
-
-/* Add input:not([type='submit']) + i || Or Go Submit And Add float:none; */
 .contact-form input:not([type='submit']) + i {
     height: 0;
     float: left;
@@ -48,7 +38,6 @@ h1{
     left: 8px;
     color:#999;
 }
-
 .contact-form .asterisx{
     height: 0;
     font-size: 20px;
@@ -57,7 +46,6 @@ h1{
     right: 10px;
     top:6px; 
 }
-
 /*Submit*/
 .contact-form .send-icon{
     display: block;
@@ -65,13 +53,9 @@ h1{
     top:-37px;
     left:7px;
     color:#FFF;
-    /*float:none;*/
     /*Submit*/
 }
-
 .contact-form .custom-alert{
     padding: 5px 10px;
     display: none;
 }
-
-/* End Form 1  */
