@@ -1,38 +1,20 @@
 <?php
-    
     // Check If User Coming From A Request
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-
         // Assign Variables 
         $user = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
         $mail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $cell = filter_var($_POST['cellphone'], FILTER_SANITIZE_NUMBER_INT);
         $msg  = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-
-        /*
-        // طريقة ثانية لأظهار الأيرور اسفل العنصر المراد
-        $userError = '';
-        $msgError = '';
-        if (strlen($user) <= 3) {
-            $userError[] = 'Username Must Be Larger Than 3 Characetrs';
-        }
-        if (strlen($user) < 10) {
-            $msgError[] = 'Message can\'t Be Less Then 10 Characetrs';
-        }
-        */
-
         // Creating Array Of Errors
         $formErrors = array();
-    
         if (strlen($user) <= 3) {
             $formErrors[] = 'Username Must Be Larger Than <strong>3</strong> Characetrs';
         }
         if (strlen($msg) < 10) {
             $formErrors[] = 'Message can\'t Be Less Then <strong>10</strong> Characetrs';
         }
-
         // If No Errors Send The Email [ maill(To, Subject, Message, Headers, Parameters) ]
-
 
         $headers = 'From:' . $mail . '\r\n';
         $myEmail = 'essamabdullah@outlook.sa';
@@ -48,13 +30,7 @@
             $msg  = '';
 
             $success = '<div class="alert alert-success"> We Have Recieved Your Message</div>';
-
-        
         }
-
-            // https://github.com/PHPMailer/PHPMailer
-            // https://www.google.com/recaptcha/about/
-            // FTP
     }
 ?>
 
@@ -68,7 +44,6 @@
         <link rel="stylesheet" href="css/all.css"/>
         <link rel="stylesheet" href="css/contact.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" >
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
         <!--
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
